@@ -9,9 +9,9 @@ public class PlayerWalljumpState : StateBase<PlayerStates> {
     }
 
     public override void OnEnter() {
-        Debug.Log("Walljump");
     }
 
     public override void OnLogic() {
+
     }
 }

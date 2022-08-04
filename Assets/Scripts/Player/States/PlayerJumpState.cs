@@ -12,14 +12,13 @@ class PlayerJumpState : StateBase<PlayerStates> {
     public override void OnEnter() {
         _controller.RigidBody.drag = 0f;
         _controller.ReadyToJump = false;
+
         Jump();
+        
         _controller.StartCoroutine(ResetJump(_controller.JumpCooldown));
     }
 
     private void Jump() {
-        _controller.ExitingSlope = true;
-
-        // reset y velocity
         _controller.RigidBody.velocity = new Vector3(_controller.RigidBody.velocity.x, 0f, _controller.RigidBody.velocity.z);
         _controller.RigidBody.AddForce(_controller.transform.up * Mathf.Sqrt(-2f * Physics.gravity.y * _controller.JumpHeight), ForceMode.Impulse);
     }
@@ -28,6 +27,5 @@ class PlayerJumpState : StateBase<PlayerStates> {
         yield return new WaitForSeconds(cooldown);
 
         _controller.ReadyToJump = true;
-        _controller.ExitingSlope = false;
     }
 }

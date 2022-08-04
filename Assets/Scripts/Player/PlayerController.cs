@@ -32,7 +32,13 @@ public class PlayerController : MonoBehaviour {
     public float WallrunDrag { get => _wallrunDrag; }
     public float StartWallrunForce { get => _startWallrunForce; }
     public float WallrunTick { get => _wallrunTick; }
-    
+
+    public float AirMultiplier { get => _airMultiplier; }
+
+    public Transform Orientation { get => _orientation; }
+
+    public float Speed { get => new Vector3(RigidBody.velocity.x, 0f, RigidBody.velocity.z).magnitude; }
+
     private StateMachine<PlayerStates> _stateMachine;
     private bool _isGrounded;
     private bool _isAbove;
@@ -45,10 +51,6 @@ public class PlayerController : MonoBehaviour {
     private Vector3 _moveDirection;
     // Crouching
     private float _startYScale;
-    // Sloping
-    private RaycastHit _slopeHit;
-    // For smooth movement
-    private Coroutine smooth;
 
     [SerializeField] private PlayerInput _input;
     [SerializeField] private Rigidbody _rigidbody;
@@ -63,7 +65,7 @@ public class PlayerController : MonoBehaviour {
     [Header("Jumping")]
     [SerializeField] private float _jumpHeight = 3f;
     [SerializeField] private float _jumpCooldown = 0.25f;
-    [SerializeField] private float airMultiplier = 0.4f;
+    [SerializeField] private float _airMultiplier = 0.4f;
 
     [Header("Crouching")]
     [SerializeField] private float _crouchSpeed = 3.5f;
@@ -73,15 +75,12 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private float _playerHeight = 2f;
     [SerializeField] private LayerMask _groundLayerMask;
 
-    [Header("Slope Handling")]
-    [SerializeField] private float _maxSlopeAngle = 40f;
-    [SerializeField] private Transform _orientation;
-
     [Header("Easy Wallrun v0.1")]
     [SerializeField] private float _wallrunDrag;
     [SerializeField] private float _startWallrunForce;
     [SerializeField] private float _wallrunTick;
-
+    
+    [SerializeField] private Transform _orientation;
     [SerializeField] private TextMeshProUGUI speed;
 
     private void Start() {
@@ -114,41 +113,17 @@ public class PlayerController : MonoBehaviour {
     }
 
     public void Update() {
-        _isGrounded = Physics.Raycast(transform.position, Vector3.down, PlayerHeight * 0.5f + 0.1f, GroundLayerMask);
-        _isAbove = Physics.Raycast(transform.position, Vector3.up, PlayerHeight * 0.5f + 0.1f, GroundLayerMask);
-        _isLeftWall = Physics.Raycast(transform.position, -_orientation.right, PlayerHeight * 0.5f + 0.1f, GroundLayerMask);
-        _isRightWall = Physics.Raycast(transform.position, _orientation.right, PlayerHeight * 0.5f + 0.1f, GroundLayerMask);
+        _isGrounded = Physics.Raycast(transform.position, Vector3.down, PlayerHeight * 0.5f + 0.05f, GroundLayerMask);
+        _isAbove = Physics.Raycast(transform.position, Vector3.up, PlayerHeight * 0.5f + 0.05f, GroundLayerMask);
+        
+        _isLeftWall = Physics.Raycast(transform.position, -_orientation.right, PlayerHeight * 0.5f + 0.05f, GroundLayerMask);
+        _isRightWall = Physics.Raycast(transform.position, _orientation.right, PlayerHeight * 0.5f + 0.05f, GroundLayerMask);
 
         _stateMachine.OnLogic();
-        SpeedControl();
         DisplaySpeed();
-    }
-    
-    private void FixedUpdate() {
-        MovePlayer();
-    }
-
-    private void SpeedControl() {
-        Vector3 flatVel = new Vector3(RigidBody.velocity.x, 0f, RigidBody.velocity.z);
-
-        if (flatVel.magnitude > WalkSpeed) {
-            Vector3 limitedVel = flatVel.normalized * WalkSpeed;
-            RigidBody.velocity = new Vector3(limitedVel.x, RigidBody.velocity.y, limitedVel.z);
-        }
-    }
-
-    private void MovePlayer() {
-        _moveDirection = _orientation.forward * _input.MovementDirection.y + _orientation.right * _input.MovementDirection.x;
-        
-        if (IsGrounded) {
-            RigidBody.AddForce(_moveDirection.normalized * WalkSpeed, ForceMode.VelocityChange);
-        } else if (!IsGrounded) {
-            RigidBody.AddForce(_moveDirection.normalized * WalkSpeed * airMultiplier, ForceMode.VelocityChange);
-        }
     }
 
     public void DisplaySpeed() {
-        Vector3 flatVel = new Vector3(RigidBody.velocity.x, 0f, RigidBody.velocity.z);
-        speed.text = "Speed: " + Mathf.Round(flatVel.magnitude);
+        speed.text = "Speed: " + Mathf.Round(Speed) + " | " + _stateMachine.ActiveStateName.ToString();
     }  
 }

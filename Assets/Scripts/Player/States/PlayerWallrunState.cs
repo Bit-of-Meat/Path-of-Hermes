@@ -9,7 +9,6 @@ public class PlayerWallrunState : StateBase<PlayerStates> {
     }
 
     public override void OnEnter() {
-        Debug.Log("Wallrun");
         _controller.RigidBody.drag = _controller.WallrunDrag;
         _upforce = _controller.StartWallrunForce;
     }
