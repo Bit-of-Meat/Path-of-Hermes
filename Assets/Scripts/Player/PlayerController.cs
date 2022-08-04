@@ -100,6 +100,7 @@ public class PlayerController : MonoBehaviour {
                      .AddTransition(PlayerStates.Ground, PlayerStates.Jump, (_) => _input.IsJump && ReadyToJump)
 
                      .AddTransition(PlayerStates.Jump, PlayerStates.Fall, (_) => ReadyToJump)
+                     .AddTransition(PlayerStates.Walljump, PlayerStates.Fall, (_) => ReadyToJump)
                      
                      .AddTransition(PlayerStates.Fall, PlayerStates.Ground, (_) => IsGrounded)
                      .AddTransition(PlayerStates.Fall, PlayerStates.Wallrun, (_) => IsLeftWall || IsRightWall)
@@ -115,7 +116,7 @@ public class PlayerController : MonoBehaviour {
     public void Update() {
         _isGrounded = Physics.Raycast(transform.position, Vector3.down, PlayerHeight * 0.5f + 0.05f, GroundLayerMask);
         _isAbove = Physics.Raycast(transform.position, Vector3.up, PlayerHeight * 0.5f + 0.05f, GroundLayerMask);
-        
+
         _isLeftWall = Physics.Raycast(transform.position, -_orientation.right, PlayerHeight * 0.5f + 0.05f, GroundLayerMask);
         _isRightWall = Physics.Raycast(transform.position, _orientation.right, PlayerHeight * 0.5f + 0.05f, GroundLayerMask);
 

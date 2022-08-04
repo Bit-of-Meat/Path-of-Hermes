@@ -11349,18 +11349,17 @@ MonoBehaviour:
   _groundDrag: 8
   _jumpHeight: 2
   _jumpCooldown: 0.25
-  airMultiplier: 0.2
+  _airMultiplier: 0.4
   _crouchSpeed: 3.5
   _crouchYScale: 0.5
   _playerHeight: 2
   _groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  _maxSlopeAngle: 40
-  _orientation: {fileID: 8649858609388371274}
   _wallrunDrag: 0
   _startWallrunForce: 2
   _wallrunTick: 1
+  _orientation: {fileID: 8649858609388371274}
   speed: {fileID: 981798799}
 --- !u!114 &8649858609763741493
 MonoBehaviour:
