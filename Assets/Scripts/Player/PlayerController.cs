@@ -95,6 +95,7 @@ public class PlayerController : MonoBehaviour {
                      .AddState(PlayerStates.Jump, new PlayerJumpState(this))
                      .AddState(PlayerStates.Fall, new PlayerFallState(this))
                      .AddState(PlayerStates.Wallrun, new PlayerWallrunState(this))
+                     .AddState(PlayerStates.Walljump, new PlayerWalljumpState(this))
 
                      .AddTransition(PlayerStates.Ground, PlayerStates.Fall, (_) => !IsGrounded)
                      .AddTransition(PlayerStates.Ground, PlayerStates.Jump, (_) => _input.IsJump && ReadyToJump)
@@ -104,7 +105,7 @@ public class PlayerController : MonoBehaviour {
                      .AddTransition(PlayerStates.Fall, PlayerStates.Ground, (_) => IsGrounded)
                      .AddTransition(PlayerStates.Fall, PlayerStates.Wallrun, (_) => IsLeftWall || IsRightWall)
 
-                     .AddTransition(PlayerStates.Wallrun, PlayerStates.Jump, (_) => _input.IsJump && ReadyToJump)
+                     .AddTransition(PlayerStates.Wallrun, PlayerStates.Walljump, (_) => _input.IsJump && ReadyToJump)
                      .AddTransition(PlayerStates.Wallrun, PlayerStates.Fall, (_) => !(IsLeftWall || IsRightWall))
                      .AddTransition(PlayerStates.Wallrun, PlayerStates.Ground, (_) => IsGrounded);
 
@@ -120,7 +121,6 @@ public class PlayerController : MonoBehaviour {
 
         _stateMachine.OnLogic();
         SpeedControl();
-        Smooth();
         DisplaySpeed();
     }
     
@@ -128,86 +128,23 @@ public class PlayerController : MonoBehaviour {
         MovePlayer();
     }
 
-    private void Smooth() {
-        // check if desired move speed has changed drastically
-        if (Mathf.Abs(DesiredMoveSpeed - _lastDesiredMoveSpeed) > 4f && _moveSpeed != 0) {
-            if (smooth != null) StopCoroutine(smooth);
-            smooth = StartCoroutine(SmoothlyLerpMoveSpeed());
-        } else {
-            _moveSpeed = DesiredMoveSpeed;
-        }
-
-        _lastDesiredMoveSpeed = DesiredMoveSpeed;
-    }
-
-    private IEnumerator SmoothlyLerpMoveSpeed() {
-        // smoothly lerp movementSpeed to desired value
-        float time = 0;
-        float difference = Mathf.Abs(DesiredMoveSpeed - _moveSpeed);
-        float startValue = _moveSpeed;
-        
-        while (time < difference) {
-            _moveSpeed = Mathf.Lerp(startValue, DesiredMoveSpeed, time / difference);
-
-            if (OnSlope()) {
-                float slopeAngle = Vector3.Angle(Vector3.up, _slopeHit.normal);
-                float slopeAngleIncrease = 1 + (slopeAngle / 90f);
-
-                time += Time.deltaTime * _speedIncreaseMultiplier * _slopeIncreaseMultiplier * slopeAngleIncrease;
-            } else
-                time += Time.deltaTime * _speedIncreaseMultiplier;
-
-            yield return null;
-        }
-
-        _moveSpeed = DesiredMoveSpeed;
-    }
-
     private void SpeedControl() {
-        // limiting speed on slope
-        if (OnSlope() && !ExitingSlope) {
-            if (RigidBody.velocity.magnitude > _moveSpeed)
-                RigidBody.velocity = RigidBody.velocity.normalized * _moveSpeed;
-        } else {
-            // limiting speed on ground or in air
-            Vector3 flatVel = new Vector3(RigidBody.velocity.x, 0f, RigidBody.velocity.z);
+        Vector3 flatVel = new Vector3(RigidBody.velocity.x, 0f, RigidBody.velocity.z);
 
-            // limit velocity if needed
-            if (flatVel.magnitude > _moveSpeed) {
-                Vector3 limitedVel = flatVel.normalized * _moveSpeed;
-                RigidBody.velocity = new Vector3(limitedVel.x, RigidBody.velocity.y, limitedVel.z);
-            }
+        if (flatVel.magnitude > WalkSpeed) {
+            Vector3 limitedVel = flatVel.normalized * WalkSpeed;
+            RigidBody.velocity = new Vector3(limitedVel.x, RigidBody.velocity.y, limitedVel.z);
         }
     }
 
     private void MovePlayer() {
         _moveDirection = _orientation.forward * _input.MovementDirection.y + _orientation.right * _input.MovementDirection.x;
-
-        if (OnSlope() && !ExitingSlope) {
-            RigidBody.AddForce(GetSlopeMoveDirection(_moveDirection) * _moveSpeed * 20f, ForceMode.Force);
-
-            if (RigidBody.velocity.y > 0)
-                RigidBody.AddForce(Vector3.down * 80f, ForceMode.Force);
-        } else if (IsGrounded) {
-            RigidBody.AddForce(_moveDirection.normalized * _moveSpeed * 10f, ForceMode.Force);
+        
+        if (IsGrounded) {
+            RigidBody.AddForce(_moveDirection.normalized * WalkSpeed, ForceMode.VelocityChange);
         } else if (!IsGrounded) {
-            RigidBody.AddForce(_moveDirection.normalized * _moveSpeed * 10f * airMultiplier, ForceMode.Force);
+            RigidBody.AddForce(_moveDirection.normalized * WalkSpeed * airMultiplier, ForceMode.VelocityChange);
         }
-
-        RigidBody.useGravity = !OnSlope();
-    }
-
-    public bool OnSlope() {
-        if (Physics.Raycast(transform.position, Vector3.down, out _slopeHit, _playerHeight * 0.5f + 0.3f)) {
-            float angle = Vector3.Angle(Vector3.up, _slopeHit.normal);
-            return angle < _maxSlopeAngle && angle != 0;
-        }
-
-        return false;
-    }
-
-    public Vector3 GetSlopeMoveDirection(Vector3 direction) {
-        return Vector3.ProjectOnPlane(direction, _slopeHit.normal).normalized;
     }
 
     public void DisplaySpeed() {
