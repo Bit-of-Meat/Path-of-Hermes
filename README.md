@@ -1,4 +1,4 @@
-<h1 align="center">Demons Sacrifice</h1>
+<h1 align="center">Path of Hermes</h1>
 
 ## Getting started ☄️
 Unity 2021.3.5f1 [[Download](https://unity3d.com/ru/unity/whats-new/2021.3.5)]
