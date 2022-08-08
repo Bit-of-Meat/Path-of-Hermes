@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     public void Update() {
-        _isGrounded = Physics.Raycast(transform.position, Vector3.down, PlayerHeight * 0.5f + 0.05f, GroundLayerMask);
+        _isGrounded = Physics.BoxCast(transform.position, new Vector3(0.5f, 0.05f, 0.5f), Vector3.down, Quaternion.identity, PlayerHeight * 0.5f, GroundLayerMask);
         _isAbove = Physics.Raycast(transform.position, Vector3.up, PlayerHeight * 0.5f + 0.05f, GroundLayerMask);
 
         _isLeftWall = Physics.Raycast(transform.position, -_orientation.right, PlayerHeight * 0.5f + 0.05f, GroundLayerMask);
@@ -122,6 +122,11 @@ public class PlayerController : MonoBehaviour {
 
         _stateMachine.OnLogic();
         DisplaySpeed();
+    }
+
+    void OnDrawGizmos() {
+        Gizmos.color = Color.black;
+        Gizmos.DrawCube(transform.position + Vector3.down * (PlayerHeight * 0.5f), new Vector3(0.5f, 0.05f, 0.5f));
     }
 
     public void DisplaySpeed() {
