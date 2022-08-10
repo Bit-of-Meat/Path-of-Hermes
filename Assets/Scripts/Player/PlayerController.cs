@@ -3,7 +3,11 @@ using UnityEngine;
 using FSM;
 using TMPro;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
+    //Base
+    public bool inWindZone = false;
+    public GameObject windZone;
     public PlayerInput Input { get => _input; }
     public Rigidbody RigidBody { get => _rigidbody; }
     //Movement
@@ -124,6 +128,27 @@ public class PlayerController : MonoBehaviour {
         DisplaySpeed();
     }
 
+    private void FixedUpdate()
+    {
+        if(inWindZone) {
+            _rigidbody.AddForce(windZone.GetComponent<wind>().direction * windZone.GetComponent<wind>().strength);
+        }
+    }
+
+    void OnTriggerEnter(Collider coll) {
+       if(coll.gameObject.tag == "windArea") {
+            windZone = coll.gameObject;
+            inWindZone = true;
+        }
+    }
+
+    void OnTriggerExit(Collider coll)
+    {
+        if (coll.gameObject.tag == "windArea")
+        {
+            inWindZone = false;
+        }
+    }
     void OnDrawGizmos() {
         Gizmos.color = Color.black;
         Gizmos.DrawCube(transform.position + Vector3.down * (PlayerHeight * 0.5f), new Vector3(0.5f, 0.05f, 0.5f));
