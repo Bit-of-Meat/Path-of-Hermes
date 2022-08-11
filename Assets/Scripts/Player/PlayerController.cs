@@ -128,10 +128,10 @@ public class PlayerController : MonoBehaviour
         DisplaySpeed();
     }
 
-    private void FixedUpdate()
-    {
+    // Nikita Arkhipov
+    private void FixedUpdate() {
         if(inWindZone) {
-            _rigidbody.AddForce(windZone.GetComponent<wind>().direction * windZone.GetComponent<wind>().strength);
+            _rigidbody.AddForce(windZone.GetComponent<Wind>().direction * windZone.GetComponent<Wind>().strength);
         }
     }
 
@@ -142,13 +142,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider coll)
-    {
-        if (coll.gameObject.tag == "windArea")
-        {
+    void OnTriggerExit(Collider coll) {
+        if (coll.gameObject.tag == "windArea") {
             inWindZone = false;
         }
     }
+    
     void OnDrawGizmos() {
         Gizmos.color = Color.black;
         Gizmos.DrawCube(transform.position + Vector3.down * (PlayerHeight * 0.5f), new Vector3(0.5f, 0.05f, 0.5f));
