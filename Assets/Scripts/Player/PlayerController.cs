@@ -3,11 +3,8 @@ using UnityEngine;
 using FSM;
 using TMPro;
 
-public class PlayerController : MonoBehaviour
-{
+public class PlayerController : MonoBehaviour {
     //Base
-    public bool inWindZone = false;
-    public GameObject windZone;
     public PlayerInput Input { get => _input; }
     public Rigidbody RigidBody { get => _rigidbody; }
     //Movement
@@ -128,6 +125,8 @@ public class PlayerController : MonoBehaviour
         DisplaySpeed();
     }
 
+    public bool inWindZone = false;
+    public GameObject windZone;
     // Nikita Arkhipov
     private void FixedUpdate() {
         if(inWindZone) {
