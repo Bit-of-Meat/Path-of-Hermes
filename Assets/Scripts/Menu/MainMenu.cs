@@ -1,11 +1,10 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
     [SerializeField] private GameObject _settings;
 
     public void Play() {
-        SceneManager.LoadScene("Game");
+        SceneLoader.LoadScene("Level01");
     }
 
     public void Quit() {
