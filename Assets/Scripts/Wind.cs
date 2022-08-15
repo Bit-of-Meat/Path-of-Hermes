@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Wind : MonoBehaviour {
@@ -14,12 +12,17 @@ public class Wind : MonoBehaviour {
         if (_inWindZone) _rigidbody.AddForce(direction * strength);
     }
 
-    void OnTriggerEnter(Collider coll) {
-        _inWindZone = true;
+    private bool CheckLayer(LayerMask layerMask, int layer) {
+        return layerMask == (layerMask | (1 << layer));
     }
 
-    void OnTriggerExit(Collider coll)
-    {
-        _inWindZone = false;
+    private void OnTriggerEnter(Collider collider) {
+        if (CheckLayer(_windLayerMask, collider.gameObject.layer))
+            _inWindZone = true;
+    }
+
+    private void OnTriggerExit(Collider collider) {
+        if (CheckLayer(_windLayerMask, collider.gameObject.layer))
+            _inWindZone = false;
     }
 }
