@@ -20,7 +20,7 @@ MonoBehaviour:
       RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
-        m_Bits: 320
+        m_Bits: 577
       PassNames: []
     overrideMaterial: {fileID: 0}
     overrideMaterialPassIndex: 0
@@ -49,17 +49,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
-  m_Name: Mask
+  m_Name: WindPhysicsObject
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   settings:
-    passTag: Mask
+    passTag: WindPhysicsObject
     Event: 250
     filterSettings:
       RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
-        m_Bits: 128
+        m_Bits: 0
       PassNames: []
     overrideMaterial: {fileID: 0}
     overrideMaterialPassIndex: 0
@@ -78,6 +78,32 @@ MonoBehaviour:
       restoreCamera: 1
       offset: {x: 0, y: 0, z: 0, w: 0}
       cameraFieldOfView: 60
+--- !u!114 &-2852977243926559284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a401b6b1bb7fb24ea1bff49cd1e0f13, type: 3}
+  m_Name: CausticsFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    strength: 0.08
+    rgbSplit: 0.217
+    shadowMask: 1
+    texture: {fileID: 2800000, guid: 0943adcffd8ee7048803ab178fc5e74d, type: 3}
+    scale: 9.87
+    speed: 0.123
+    waterLevel: 0
+    depth: {x: 0, y: 4}
+    fade: 1
+    renderPassEvent: 400
+    debug: 0
+  causticsShader: {fileID: 4800000, guid: e8cdbdcc4287bd344a1d042d8f601b9a, type: 3}
 --- !u!114 &-1878332245247344467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +122,7 @@ MonoBehaviour:
     Downsample: 0
     AfterOpaque: 0
     Source: 1
-    NormalSamples: 1
+    NormalSamples: 2
     Intensity: 0.5
     DirectLightingStrength: 0.25
     Radius: 0.25
@@ -120,7 +146,8 @@ MonoBehaviour:
   - {fileID: -1878332245247344467}
   - {fileID: -7138293408365705160}
   - {fileID: -7852345445708469873}
-  m_RendererFeatureMap: adc0de57c6d2eee53888d923f7afef9c8fe9e3ae6bdd0693
+  - {fileID: -2852977243926559284}
+  m_RendererFeatureMap: adc0de57c6d2eee53888d923f7afef9c8fe9e3ae6bdd0693cc057cf74f3068d8
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
