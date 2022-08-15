@@ -59,8 +59,6 @@ public class PlayerController : MonoBehaviour {
     [Header("Movement")]
     [SerializeField] private float _walkSpeed = 5f;
     [SerializeField] private float _sprintSpeed = 7f;
-    [SerializeField] private float _speedIncreaseMultiplier = 1.5f;
-    [SerializeField] private float _slopeIncreaseMultiplier = 2.5f;
     [SerializeField] private float _groundDrag = 8f;
 
     [Header("Jumping")]
@@ -121,30 +119,12 @@ public class PlayerController : MonoBehaviour {
         _isLeftWall = Physics.Raycast(transform.position, -_orientation.right, PlayerHeight * 0.5f + 0.05f, GroundLayerMask);
         _isRightWall = Physics.Raycast(transform.position, _orientation.right, PlayerHeight * 0.5f + 0.05f, GroundLayerMask);
 
-        _stateMachine.OnLogic();
+        //_stateMachine.OnLogic();
         DisplaySpeed();
     }
 
-    public bool inWindZone = false;
-    public GameObject windZone;
-    // Nikita Arkhipov
-    private void FixedUpdate() {
-        if(inWindZone) {
-            _rigidbody.AddForce(windZone.GetComponent<Wind>().direction * windZone.GetComponent<Wind>().strength);
-        }
-    }
-
-    void OnTriggerEnter(Collider coll) {
-       if(coll.gameObject.tag == "windArea") {
-            windZone = coll.gameObject;
-            inWindZone = true;
-        }
-    }
-
-    void OnTriggerExit(Collider coll) {
-        if (coll.gameObject.tag == "windArea") {
-            inWindZone = false;
-        }
+    public void FixedUpdate() {
+        _stateMachine.OnLogic();
     }
     
     void OnDrawGizmos() {

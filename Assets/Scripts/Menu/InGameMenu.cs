@@ -3,19 +3,23 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class InGameMenu : MonoBehaviour {
-    [SerializeField] private GameObject _ui;
+    [SerializeField] private GameObject _settings;
     public void Show(InputAction.CallbackContext context) => Show();
 
     public void Show() {
-        bool _uiState = _ui.activeSelf;
+        bool _uiState = gameObject.activeSelf;
         PlayerInput.SetCursorLock(_uiState);
-        _ui.SetActive(!_uiState);
-        Time.timeScale = _uiState ? 1f : 0.1f;
+        gameObject.SetActive(!_uiState);
+        Time.timeScale = _uiState ? 1f : 0f;
+    }
+
+    public void Settings() {
+        _settings.SetActive(true);
     }
 
     public void BackToMainMenu() {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        SceneLoader.LoadScene("MainMenu");
     }
 
     public void Quit() {
