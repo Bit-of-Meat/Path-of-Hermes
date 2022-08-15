@@ -5,42 +5,45 @@ using TMPro;
 
 // class for initialize settings
 public class SettingsInit : MonoBehaviour {
-    public Resolution[] Resolutions { get => _resolutions; }
-    public List<string> ResolutionsOptions { get => _resolutionsOptions; }
-    public int CurrentResolutionIndex { get => _currentResolutionIndex; }
+    public static SettingsInit Instance { get; private set; }
+    public static Resolution[] Resolutions { get; private set; }
+    public static List<string> ResolutionsOptions { get; private set; }
+    public static int CurrentResolutionIndex { get; private set; }
 
     [SerializeField] private AudioMixer _audioMixer;
     
-    private Resolution[] _resolutions;
-    private List<string> _resolutionsOptions = new List<string>();
-    private int _currentResolutionIndex = 0;
-
-    public static SettingsInit instance;
-
-    public void Awake() {
-        instance = this;
+    private void Awake() {
+        if (!Instance) {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+            Load();
+        } else {
+            Destroy(gameObject);
+            Debug.LogWarning($"More than one {this} instance found.");
+        }
     }
 
-    public void Start() {
-        AudioInit();
+    private void Load() {
+        AudioInit(_audioMixer);
         ResolutionInit();
     }
 
     // Set audio settings
-    private void AudioInit() {
-        _audioMixer.SetFloat("volume", PlayerPrefs.GetFloat("volume"));
+    private static void AudioInit(AudioMixer audioMixer) {
+        audioMixer.SetFloat("volume", PlayerPrefs.GetFloat("volume"));
     }
 
     // Get resolutions
-    private void ResolutionInit() {
-        _resolutions = Screen.resolutions;
+    private static void ResolutionInit() {
+        Resolutions = Screen.resolutions;
+        ResolutionsOptions = new List<string>();
 
-        for (int i = 0; i < _resolutions.Length; i++) {
-            Resolution _resolution = _resolutions[i];
+        for (int i = 0; i < Resolutions.Length; i++) {
+            Resolution _resolution = Resolutions[i];
 
-            _resolutionsOptions.Add(_resolution.width + " x " + _resolution.height + " @" + _resolution.refreshRate);
+            ResolutionsOptions.Add(_resolution.width + " x " + _resolution.height + " @" + _resolution.refreshRate);
             if (_resolution.width == Screen.currentResolution.width && _resolution.height == Screen.currentResolution.height)
-                _currentResolutionIndex = i;
+                CurrentResolutionIndex = i;
         }
     }
 }

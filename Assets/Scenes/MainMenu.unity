@@ -373,6 +373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 1994223683}
+  _animatorVariable: IsLoading
 --- !u!114 &240667787
 MonoBehaviour:
   m_ObjectHideFlags: 0

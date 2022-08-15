@@ -59,8 +59,6 @@ public class PlayerController : MonoBehaviour {
     [Header("Movement")]
     [SerializeField] private float _walkSpeed = 5f;
     [SerializeField] private float _sprintSpeed = 7f;
-    [SerializeField] private float _speedIncreaseMultiplier = 1.5f;
-    [SerializeField] private float _slopeIncreaseMultiplier = 2.5f;
     [SerializeField] private float _groundDrag = 8f;
 
     [Header("Jumping")]
