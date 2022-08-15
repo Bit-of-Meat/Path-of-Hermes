@@ -15,12 +15,11 @@ public class Wind : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider coll) {
-        if (_windLayerMask == 1 << coll.gameObject.layer)
-            _inWindZone = true;
+        _inWindZone = true;
     }
 
-    void OnTriggerExit(Collider coll) {
-        if (_windLayerMask == 1 << coll.gameObject.layer)
-            _inWindZone = false;
+    void OnTriggerExit(Collider coll)
+    {
+        _inWindZone = false;
     }
 }
