@@ -8,8 +8,10 @@ public class Climbing : MonoBehaviour {
 
     [Header("Heights")]
     [SerializeField] private float _overpassHeight;
-    [SerializeField] private float _stepHeight;
+    [SerializeField] private float _hangHeight;
+    [SerializeField] private float _climbUpHeight;
     [SerializeField] private float _vaultHeight;
+    [SerializeField] private float _stepHeight;
     
     [Header("Offsets")]
     [SerializeField] private Vector3 _climbOriginDown;
@@ -20,8 +22,11 @@ public class Climbing : MonoBehaviour {
     [SerializeField] private CapsuleCollider _capsule;
 
     private RaycastHit _downRaycastHit;
-
+    
     private bool _climbing;
+    private Vector3 _endPosition;
+    private Vector3 _forwardDirectionXZ;
+    private Vector3 _forwardNormalXZ;
 
     private bool CanClimb(out RaycastHit downRaycastHit, out RaycastHit forwardRaycastHit, out Vector3 endPosition) {
         endPosition = Vector3.zero;
@@ -38,10 +43,6 @@ public class Climbing : MonoBehaviour {
         RaycastHit _downRaycastHit;
         RaycastHit _forwardRaycastHit;
         RaycastHit _overpassRaycastHit;
-
-        Vector3 _endPosition;
-        Vector3 _forwardDirectionXZ;
-        Vector3 _forwardNormalXZ;
 
         Vector3 _downDirection = Vector3.down;
         Vector3 _downOrigin = transform.TransformPoint(_climbOriginDown);
