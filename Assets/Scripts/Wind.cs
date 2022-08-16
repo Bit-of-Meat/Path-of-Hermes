@@ -1,28 +1,40 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Wind : MonoBehaviour
-{
-    [SerializeField] private float strength;
-    [SerializeField] private Vector3 direction;
-    [SerializeField] private Vector3 _size;
+public class Wind : MonoBehaviour {
+    [Header("Settings")]
+    [SerializeField] private float _strength = 20f;
     [SerializeField] private LayerMask _windLayerMask;
 
-    private void FixedUpdate()
-    {
-        var _colliders = Physics.OverlapBox(transform.position, _size, Quaternion.identity, _windLayerMask);
-        foreach (var _collider in _colliders)
-            if (_collider.attachedRigidbody != null) _collider.attachedRigidbody.AddForce(direction * strength);
+    [Header("Perfomance")]
+    [SerializeField] private int _maximumOfDetectionObjects = 10;
+
+    private Collider[] _buffer;
+
+    private void Start() {
+        _buffer = new Collider[_maximumOfDetectionObjects];
     }
 
-    private void OnDrawGizmos()
-    {
+    private void FixedUpdate() {
+        // non alloc APIs will write collider references to the `buffer` variable - which has been pre allocated.
+        int _bufferSize = Physics.OverlapBoxNonAlloc(transform.position, transform.localScale / 2, _buffer, transform.rotation, _windLayerMask);
+        
+        for (int i = 0; i < _bufferSize; i++) {
+            Rigidbody _rigidbody = _buffer[i].attachedRigidbody;
+            if (_rigidbody) _rigidbody.AddForce(transform.up * _strength);
+        }
+    }
+    
+    private void OnDrawGizmosSelected() {
+        Gizmos.matrix = transform.localToWorldMatrix;
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(Vector3.zero, Vector3.up / 2);
+
         Gizmos.color = Color.green;
-        Gizmos.DrawCube(transform.position, _size);
+        Gizmos.DrawWireCube(Vector3.zero, Vector3.one);
     }
 
-    private bool CheckLayer(LayerMask layerMask, int layer)
-    {
+    private bool CheckLayer(LayerMask layerMask, int layer) {
         return layerMask == (layerMask | (1 << layer));
     }
 }
