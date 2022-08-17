@@ -1,6 +1,6 @@
 <h1 align="center">Path of Hermes</h1>
 
-[Russian version](RU.md)
+[Russian version](translate/ru)
 
 ## Getting started ☄️
 Unity 2021.3.5f1 [[Download](https://unity3d.com/ru/unity/whats-new/2021.3.5)]

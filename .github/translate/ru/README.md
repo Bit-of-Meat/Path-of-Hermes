@@ -1,7 +1,5 @@
 <h1 align="center">Путь гермеса</h1>
 
-[Английская версия](README.md)
-
 ## Начало работы ☄️
 Unity 2021.3.5f1 [[Скачать](https://unity3d.com/ru/unity/whats-new/2021.3.5)]
 

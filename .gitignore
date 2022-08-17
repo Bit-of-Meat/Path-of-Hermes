@@ -70,13 +70,12 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-Assets/Packages/Stylized Water For URP/Materials/Windwaker.mat
-Assets/Polytope Studio.meta
-Assets/Polytope Studio/Lowpoly Medieval Environments.meta
-Assets/Polytope Studio/Lowpoly Medieval Environments/SRP.meta
-Assets/Polytope Studio/Lowpoly Medieval Environments/SRP/PT_Environment_Pack_URP_7.5.3.unitypackage.meta
-Assets/Packages/Stylized Water For URP/Materials/Windwaker.mat
-Assets/Packages/Stylized Water For URP/Materials/Windwaker.mat
-*.mat
-Assets/Packages/Stylized Water For URP/Materials/Windwaker.mat
-Assets/Packages/Stylized Water For URP/Materials/Windwaker.mat
+
+# Assets
+/[Aa]ssets/Polytope Studio/
+/[Aa]ssets/Polytope Studio.meta
+
+/[Aa]ssets/[Pp]ackages/[Ss]tylized [Ww]ater [Ff]or URP/[Mm]aterials/[Ww]indwaker.mat
+
+# Other
+UpgradeLog.htm
