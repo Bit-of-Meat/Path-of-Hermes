@@ -7,8 +7,7 @@ public class ThrowingTutorial : MonoBehaviour {
 
     [Header("Projectile")]
     [SerializeField] private Rigidbody _projectile;
-    [SerializeField] private MeshRenderer _projectileMesh;
-    [SerializeField] private Collider _projectileCollider;
+    [SerializeField] private GameObject _projectileChild;
     
     [Header("Throw settings")]
     [SerializeField] private float _lerpTime = 1f;
@@ -42,8 +41,7 @@ public class ThrowingTutorial : MonoBehaviour {
     }
 
     private void Show(bool isActive) {
-        _projectileMesh.enabled = isActive;
-        _projectileCollider.enabled = isActive;
+        _projectileChild.SetActive(isActive);
         _projectile.isKinematic = !isActive;
         _readyToThrow = !isActive;
     }
