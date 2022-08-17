@@ -27,10 +27,7 @@ public class ThrowingTutorial : MonoBehaviour {
 
             _isLerping = !(Vector3.Distance(_projectile.position, _hand.position) <= 0.5f);
             
-            if (!_isLerping) {
-                Show(false);
-                _projectile.transform.position = _hand.position;
-            }
+            if (!_isLerping) Show(false);
         } else {
             _isLerping = Vector3.Distance(_projectile.position, _hand.position) > _backDistance;
             if (_isLerping) _projectile.isKinematic = true;
@@ -48,6 +45,7 @@ public class ThrowingTutorial : MonoBehaviour {
 
     public void Throw() {
         Show(true);
+        _projectile.transform.position = _hand.position;
 
         Vector3 _forceDirection = _camera.forward;
         
