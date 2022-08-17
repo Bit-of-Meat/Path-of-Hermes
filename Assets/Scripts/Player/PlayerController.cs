@@ -119,7 +119,6 @@ public class PlayerController : MonoBehaviour {
         _isLeftWall = Physics.Raycast(transform.position, -_orientation.right, PlayerHeight * 0.5f + 0.05f, GroundLayerMask);
         _isRightWall = Physics.Raycast(transform.position, _orientation.right, PlayerHeight * 0.5f + 0.05f, GroundLayerMask);
 
-        //_stateMachine.OnLogic();
         DisplaySpeed();
     }
 
