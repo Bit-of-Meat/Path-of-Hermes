@@ -24,6 +24,12 @@ public class PlayerInput : MonoBehaviour {
         get => _isSprint;
     }
     /// <summary>
+    /// Returns true if fire key is pressed
+    /// </summary>
+    public bool IsFire {
+        get => _isFire;
+    }
+    /// <summary>
     /// Returns WASD, Gamepad left stick, etc.
     /// </summary>
     public Vector2 MovementDirection {
@@ -43,6 +49,7 @@ public class PlayerInput : MonoBehaviour {
     private bool _isJump;
     private bool _isCrouch;
     private bool _isSprint;
+    private bool _isFire;
     private Vector2 _movementDirection;
     private Vector2 _lookDirection;
 
@@ -59,6 +66,7 @@ public class PlayerInput : MonoBehaviour {
         _isJump = _controls.Player.Jump.IsPressed();
         _isCrouch = _controls.Player.Crouch.IsPressed();
         _isSprint = _controls.Player.Sprint.IsPressed();
+        _isFire = _controls.Player.Fire.IsPressed();
 
         _movementDirection = _controls.Player.Movement.ReadValue<Vector2>();
         _lookDirection = _controls.Player.Look.ReadValue<Vector2>();

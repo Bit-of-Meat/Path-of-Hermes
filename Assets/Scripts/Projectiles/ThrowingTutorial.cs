@@ -1,41 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class ThrowingTutorial : MonoBehaviour
-{
+public class ThrowingTutorial : MonoBehaviour {
     [Header("References")]
-    public Transform cam;
-    public Transform attackPoint;
-    public GameObject objectToThrow;
+    [SerializeField] private Transform cam;
+    [SerializeField] private Transform attackPoint;
+    [SerializeField] private GameObject objectToThrow;
 
     [Header("Settings")]
-    public int totalThrows;
-    public float throwCooldown;
+    [SerializeField] private int totalThrows;
+    [SerializeField] private float throwCooldown;
 
     [Header("Throwing")]
-    public KeyCode throwKey = KeyCode.Mouse0;
-    public float throwForce;
-    public float throwUpwardForce;
+    [SerializeField] private KeyCode throwKey = KeyCode.Mouse0;
+    [SerializeField] private float throwForce;
+    [SerializeField] private float throwUpwardForce;
+    [Space]
+    [SerializeField] private PlayerInput _input;
+    private bool readyToThrow;
 
-    bool readyToThrow;
-
-    private void Start()
-    {
+    private void Start() {
         readyToThrow = true;
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0)
-        {
+    private void Update() {
+        if(_input.IsFire && readyToThrow && totalThrows > 0){
             Throw();
         }
     }
 
-    private void Throw()
-    {
+    private void Throw() {
         readyToThrow = false;
 
         // instantiate object to throw
@@ -48,25 +41,18 @@ public class ThrowingTutorial : MonoBehaviour
         Vector3 forceDirection = cam.transform.forward;
 
         RaycastHit hit;
-
-        if(Physics.Raycast(cam.position, cam.forward, out hit, 500f))
-        {
+        if(Physics.Raycast(cam.position, cam.forward, out hit, 500f)) {
             forceDirection = (hit.point - attackPoint.position).normalized;
         }
 
-        // add force
         Vector3 forceToAdd = forceDirection * throwForce + transform.up * throwUpwardForce;
-
         projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
-
         totalThrows--;
 
-        // implement throwCooldown
         Invoke(nameof(ResetThrow), throwCooldown);
     }
 
-    private void ResetThrow()
-    {
+    private void ResetThrow() {
         readyToThrow = true;
     }
 }
