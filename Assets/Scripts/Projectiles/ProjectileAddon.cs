@@ -1,53 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileAddon : MonoBehaviour
-{
-    public int damage;
-    ThrowingTutorial TS;
-    private Rigidbody rb;
-    private bool targetHit;
+public class ProjectileAddon : MonoBehaviour {
+    [SerializeField] private int damage;
+    [SerializeField] private ThrowingTutorial TS;
+    [SerializeField] private Rigidbody rb;
 
-    public int collide;
+    private int _collide = 0;
 
-    private void Start()
-    {
-        collide = 0;
-        rb = GetComponent<Rigidbody>();
+    private void OnCollisionEnter(Collision collision) {
+        _collide++;
+
+        BasicEnemyDone enemy = collision.gameObject.GetComponent<BasicEnemyDone>();
+
+        if(enemy != null) enemy.TakeDamage(damage);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        collide++;
-        Debug.Log(collide);
-
-        // make sure only to stick to the first target you hit
-        if (targetHit)
-            return;
-        else
-            targetHit = true;
-        // check if you hit an enemy
-        if(collision.gameObject.GetComponent<BasicEnemyDone>() != null)
-        {
-            BasicEnemyDone enemy = collision.gameObject.GetComponent<BasicEnemyDone>();
-
-            enemy.TakeDamage(damage);
-
-            // destroy projectile
-            Destroy(gameObject);
-        }
-
-        // make sure projectile moves with target
-        transform.SetParent(collision.transform);
-    }
-
-    public void Update()
-    {
-        if (collide == 2)
-        {
-            TS.goback = true;
-            collide = 0;
+    public void Update() {
+        if (_collide == 2) {
+            //TS.goback = true;
+            _collide = 0;
         }
     }
 }
