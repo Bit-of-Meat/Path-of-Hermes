@@ -19,22 +19,29 @@ public class ThrowingTutorial : MonoBehaviour
     public float throwForce;
     public float throwUpwardForce;
 
+    public Transform Target;
+    public bool goBack = false;
+    float goBackSpeed = 10.0f;
+    const float Epsilon = 0.1f;
+    Vector3 LookDirection;
+
+
     bool readyToThrow;
 
-    private void Start()
+    public void Start()
     {
+        goBack = false;
         readyToThrow = true;
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0)
+        if (Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0)
         {
             Throw();
         }
     }
-
-    private void Throw()
+    public void Throw()
     {
         readyToThrow = false;
 
@@ -49,7 +56,7 @@ public class ThrowingTutorial : MonoBehaviour
 
         RaycastHit hit;
 
-        if(Physics.Raycast(cam.position, cam.forward, out hit, 500f))
+        if (Physics.Raycast(cam.position, cam.forward, out hit, 500f))
         {
             forceDirection = (hit.point - attackPoint.position).normalized;
         }
@@ -63,6 +70,11 @@ public class ThrowingTutorial : MonoBehaviour
 
         // implement throwCooldown
         Invoke(nameof(ResetThrow), throwCooldown);
+
+        if ((projectile.transform.position - Target.position).magnitude > Epsilon && goBack == true)
+        {
+            projectile.transform.Translate(LookDirection * Time.deltaTime * goBackSpeed);
+        }
     }
 
     private void ResetThrow()
