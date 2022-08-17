@@ -84057,7 +84057,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525213216}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.279, y: -0.423, z: 1.031}
+  m_LocalPosition: {x: 0.231, y: -0.423, z: 1.356}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -106985,17 +106985,17 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.34423968, g: 0.73773575, b: 1, a: 1}
+  shallowColor: {r: 0.3442382, g: 0.73773575, b: 1, a: 1}
   deepColor: {r: 0.58552855, g: 0.9622641, b: 0.95837563, a: 1}
   colorDepth: 2.59
-  horizonColor: {r: 0.24045911, g: 0.27458408, b: 1, a: 1}
+  horizonColor: {r: 0.24045765, g: 0.27458262, b: 1, a: 1}
   horizonDistance: 20
   shoreFade: 0
   shoreColor: {r: 0, g: 0.98039216, b: 0.915087, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0
-  waveColor: {r: 0.36768827, g: 0.63200873, b: 0.8962264, a: 1}
+  waveColor: {r: 0.36768678, g: 0.63200873, b: 0.8962264, a: 1}
   underwaterColor: {r: 0, g: 0, b: 0, a: 0}
   underwaterColorStrength: 0
   underwaterRefractionStrength: 0
@@ -107382,11 +107382,11 @@ MonoBehaviour:
   attackPoint: {fileID: 1525213217}
   objectToThrow: {fileID: 9149614200151794825, guid: 4acf53f6fe2ce9b45b481504a936e7a6,
     type: 3}
-  totalThrows: 100
+  totalThrows: 200
   throwCooldown: 0.1
   throwKey: 323
-  throwForce: 70
-  throwUpwardForce: 0
+  throwForce: 10
+  throwUpwardForce: 12
 --- !u!114 &7123932831362849833
 MonoBehaviour:
   m_ObjectHideFlags: 0

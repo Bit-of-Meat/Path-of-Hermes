@@ -34,9 +34,6 @@ public class ProjectileAddon : MonoBehaviour
             Destroy(gameObject);
         }
 
-        // make sure projectile sticks to surface
-        rb.isKinematic = true;
-
         // make sure projectile moves with target
         transform.SetParent(collision.transform);
     }
