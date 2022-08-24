@@ -1,3 +1,5 @@
+using System.Collections;
+using UnityEngine;
 using FSM;
 
 class PlayerSlideState : StateBase<PlayerStates> {
@@ -8,9 +10,21 @@ class PlayerSlideState : StateBase<PlayerStates> {
     }
 
     public override void OnEnter() {
+        _controller.RigidBody.drag = _controller.SlideDrag;
+
+        _controller.transform.localScale = new Vector3(_controller.transform.localScale.x, _controller.CrouchYScale, _controller.transform.localScale.z);
+        _controller.RigidBody.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+
+        _controller.Crouching = true;
+
+        _controller.DesiredMoveSpeed = _controller.SlideSpeed;
     }
 
-    public override void OnLogic() {
+    public override void OnExit() {
+        _controller.RigidBody.drag = _controller.GroundDrag;
 
+        _controller.transform.localScale = new Vector3(_controller.transform.localScale.x, _controller.StartYScale, _controller.transform.localScale.z);
+
+        _controller.Crouching = false;
     }
 }

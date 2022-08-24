@@ -6,7 +6,4 @@ class PlayerIdleState : StateBase<PlayerStates> {
     public PlayerIdleState(PlayerController controller) : base(needsExitTime: false) {
         _controller = controller;
     }
-
-    public override void OnEnter() {
-    }
 }

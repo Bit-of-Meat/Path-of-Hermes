@@ -4,6 +4,7 @@ using FSM;
 public class PlayerWallrunState : StateBase<PlayerStates> {
     private PlayerController _controller;
     private float _upforce;
+    
     public PlayerWallrunState(PlayerController controller) : base(needsExitTime: false) {
         _controller = controller;
     }

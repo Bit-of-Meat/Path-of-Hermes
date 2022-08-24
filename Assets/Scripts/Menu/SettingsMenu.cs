@@ -17,6 +17,10 @@ public class SettingsMenu : MonoBehaviour {
         _resolutionDropdown.RefreshShownValue();
     }
 
+    public void SetFullscreen(bool value) {
+        Screen.fullScreen = value;
+    }
+
     public void SetResolution(int resolutionIndex) {
         Resolution _resolution = SettingsInit.Resolutions[resolutionIndex];
         Screen.SetResolution(_resolution.width, _resolution.height, Screen.fullScreen);

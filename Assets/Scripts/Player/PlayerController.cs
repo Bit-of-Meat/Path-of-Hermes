@@ -11,10 +11,12 @@ public class PlayerController : MonoBehaviour {
     public float DesiredMoveSpeed { get; set; }
     public float WalkSpeed { get => _walkSpeed; }
     public float SprintSpeed { get => _sprintSpeed; }
+    public float SlideSpeed { get => _slideSpeed; }
     // Ground
     public bool IsGrounded { get => _isGrounded; }
     public LayerMask GroundLayerMask { get => _groundLayerMask; }
     public float GroundDrag { get => _groundDrag; }
+    public float SlideDrag { get => _slideDrag; }
     public bool IsAbove { get => _isAbove; }
     public float PlayerHeight { get => _playerHeight; }
     public bool IsLeftWall { get => _isLeftWall; }
@@ -47,8 +49,8 @@ public class PlayerController : MonoBehaviour {
     private bool _isRightWall;
 
     // Movement
-    private float _moveSpeed;
-    private float _lastDesiredMoveSpeed;
+    public float MoveSpeed { get; set; }
+    public float LastDesiredMoveSpeed { get; set; }
     private Vector3 _moveDirection;
     // Crouching
     private float _startYScale;
@@ -59,6 +61,8 @@ public class PlayerController : MonoBehaviour {
     [Header("Movement")]
     [SerializeField] private float _walkSpeed = 5f;
     [SerializeField] private float _sprintSpeed = 7f;
+    [SerializeField] private float _slideSpeed = 7f;
+    [SerializeField] private float _slideDrag = 0f;
     [SerializeField] private float _groundDrag = 8f;
 
     [Header("Jumping")]
@@ -81,6 +85,9 @@ public class PlayerController : MonoBehaviour {
     
     [SerializeField] private Transform _orientation;
     [SerializeField] private TextMeshProUGUI speed;
+
+
+    private Coroutine smooth = null;
 
     private void Start() {
         RigidBody.freezeRotation = true;
@@ -124,12 +131,20 @@ public class PlayerController : MonoBehaviour {
 
     public void FixedUpdate() {
         _stateMachine.OnLogic();
+
+        Vector3 flatVel = new Vector3(RigidBody.velocity.x, 0f, RigidBody.velocity.z);
+
+        if (flatVel.magnitude > DesiredMoveSpeed) {
+            Vector3 limitedVel = flatVel.normalized * DesiredMoveSpeed;
+            RigidBody.velocity = new Vector3(limitedVel.x, RigidBody.velocity.y, limitedVel.z);
+        }
     }
     
     void OnDrawGizmos() {
         Gizmos.color = Color.black;
         Gizmos.DrawCube(transform.position + Vector3.down * (PlayerHeight * 0.5f), new Vector3(0.5f, 0.05f, 0.5f));
     }
+
 
     public void DisplaySpeed() {
         speed.text = "Speed: " + Mathf.Round(Speed) + " | " + _stateMachine.ActiveStateName.ToString();

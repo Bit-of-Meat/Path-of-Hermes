@@ -25,7 +25,9 @@ class PlayerGroundState : StateBase<PlayerStates> {
                      .AddTransition(PlayerStates.Walk, PlayerStates.Crouch, (_) => _controller.Input.IsCrouch)
 
                      .AddTransition(PlayerStates.Run, PlayerStates.Walk, (_) => !_controller.Input.IsSprint)
-                     .AddTransition(PlayerStates.Run, PlayerStates.Crouch, (_) => _controller.Input.IsCrouch)
+                     .AddTransition(PlayerStates.Run, PlayerStates.Slide, (_) => _controller.Input.IsCrouch)
+
+                     .AddTransition(PlayerStates.Slide, PlayerStates.Crouch, (_) => _controller.Speed <= _controller.CrouchSpeed)
                      
                      .AddTransition(PlayerStates.Crouch, PlayerStates.Idle, (_) => !_controller.Input.IsCrouch && !_controller.IsAbove);
 
@@ -39,12 +41,8 @@ class PlayerGroundState : StateBase<PlayerStates> {
     }
 
     public override void OnLogic() {
-        MovePlayer();
-
         _stateMachine.OnLogic();
-    }
-
-    private void MovePlayer() {
+        
         Vector3 _moveDirection = _controller.Orientation.forward * _controller.Input.MovementDirection.y + _controller.Orientation.right * _controller.Input.MovementDirection.x;
         _controller.RigidBody.AddForce(_moveDirection.normalized * _controller.DesiredMoveSpeed * 10f, ForceMode.Force);
     }
