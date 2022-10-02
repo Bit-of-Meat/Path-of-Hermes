@@ -1,0 +1,287 @@
+{
+  "api/Global.ALIyerEdonAssets_Lighting.html": {
+    "href": "api/Global.ALIyerEdonAssets_Lighting.html",
+    "title": "Class ALIyerEdonAssets_Lighting | Path of Hermes",
+    "keywords": "Class ALIyerEdonAssets_Lighting Inheritance Object ALIyerEdonAssets_Lighting Namespace : Global Assembly : cs.temp.dll.dll Syntax public class ALIyerEdonAssets_Lighting : EditorWindow Fields dontShow Declaration public bool dontShow Field Value Type Description Boolean Methods DrawUILine(Color, Int32, Int32) Declaration public static void DrawUILine(Color color, int thickness = 2, int padding = 10) Parameters Type Name Description Color color Int32 thickness Int32 padding ShowWindow() Declaration public static void ShowWindow()"
+  },
+  "api/Global.AudioSourceGroup.html": {
+    "href": "api/Global.AudioSourceGroup.html",
+    "title": "Class AudioSourceGroup | Path of Hermes",
+    "keywords": "Class AudioSourceGroup Inheritance Object AudioSourceGroup Namespace : Global Assembly : cs.temp.dll.dll Syntax public class AudioSourceGroup : MonoBehaviour Fields typingSources Declaration public AudioSource[] typingSources Field Value Type Description AudioSource [] Methods PlayFromNextSource(AudioClip) Declaration public void PlayFromNextSource(AudioClip clip) Parameters Type Name Description AudioClip clip"
+  },
+  "api/Global.BuoyantObject.html": {
+    "href": "api/Global.BuoyantObject.html",
+    "title": "Class BuoyantObject | Path of Hermes",
+    "keywords": "Class BuoyantObject Inheritance Object BuoyantObject Namespace : Global Assembly : cs.temp.dll.dll Syntax public class BuoyantObject : MonoBehaviour Fields angularDrag Declaration public float angularDrag Field Value Type Description Single effectors Declaration public Transform[] effectors Field Value Type Description Transform [] objectDepth Declaration public float objectDepth Field Value Type Description Single strength Declaration public float strength Field Value Type Description Single velocityDrag Declaration public float velocityDrag Field Value Type Description Single water Declaration public StylizedWaterURP water Field Value Type Description StylizedWater.StylizedWaterURP"
+  },
+  "api/Global.Climbing.html": {
+    "href": "api/Global.Climbing.html",
+    "title": "Class Climbing | Path of Hermes",
+    "keywords": "Class Climbing Inheritance Object Climbing Namespace : Global Assembly : cs.temp.dll.dll Syntax public class Climbing : MonoBehaviour"
+  },
+  "api/Global.DialogueCommand.html": {
+    "href": "api/Global.DialogueCommand.html",
+    "title": "Struct DialogueCommand | Path of Hermes",
+    "keywords": "Struct DialogueCommand Namespace : Global Assembly : cs.temp.dll.dll Syntax public struct DialogueCommand Fields floatValue Declaration public float floatValue Field Value Type Description Single position Declaration public int position Field Value Type Description Int32 stringValue Declaration public string stringValue Field Value Type Description String textAnimValue Declaration public TextAnimationType textAnimValue Field Value Type Description TextAnimationType type Declaration public DialogueCommandType type Field Value Type Description DialogueCommandType"
+  },
+  "api/Global.DialogueCommandType.html": {
+    "href": "api/Global.DialogueCommandType.html",
+    "title": "Enum DialogueCommandType | Path of Hermes",
+    "keywords": "Enum DialogueCommandType Namespace : Global Assembly : cs.temp.dll.dll Syntax public enum DialogueCommandType Fields Name Description AnimEnd AnimStart Pause TextSpeedChange"
+  },
+  "api/Global.DialogueManager.html": {
+    "href": "api/Global.DialogueManager.html",
+    "title": "Class DialogueManager | Path of Hermes",
+    "keywords": "Class DialogueManager Inheritance Object DialogueManager Namespace : Global Assembly : cs.temp.dll.dll Syntax public class DialogueManager : MonoBehaviour Fields audioSourceGroup Declaration public AudioSourceGroup audioSourceGroup Field Value Type Description AudioSourceGroup dialogue1 Declaration public string dialogue1 Field Value Type Description String dialogue2 Declaration public string dialogue2 Field Value Type Description String dialogue3 Declaration public string dialogue3 Field Value Type Description String playDialogue1Button Declaration public Button playDialogue1Button Field Value Type Description Button playDialogue2Button Declaration public Button playDialogue2Button Field Value Type Description Button playDialogue3Button Declaration public Button playDialogue3Button Field Value Type Description Button textBox Declaration public TMP_Text textBox Field Value Type Description TMP_Text typingClip Declaration public AudioClip typingClip Field Value Type Description AudioClip"
+  },
+  "api/Global.DialogueUtility.html": {
+    "href": "api/Global.DialogueUtility.html",
+    "title": "Class DialogueUtility | Path of Hermes",
+    "keywords": "Class DialogueUtility Inheritance Object DialogueUtility Namespace : Global Assembly : cs.temp.dll.dll Syntax public class DialogueUtility : MonoBehaviour Methods ProcessInputString(String, out String) Declaration public static List<DialogueCommand> ProcessInputString(string message, out string processedMessage) Parameters Type Name Description String message String processedMessage Returns Type Description List < DialogueCommand >"
+  },
+  "api/Global.DialogueVertexAnimator.html": {
+    "href": "api/Global.DialogueVertexAnimator.html",
+    "title": "Class DialogueVertexAnimator | Path of Hermes",
+    "keywords": "Class DialogueVertexAnimator Inheritance Object DialogueVertexAnimator Namespace : Global Assembly : cs.temp.dll.dll Syntax public class DialogueVertexAnimator Constructors DialogueVertexAnimator(TMP_Text, AudioSourceGroup) Declaration public DialogueVertexAnimator(TMP_Text _textBox, AudioSourceGroup _audioSourceGroup) Parameters Type Name Description TMP_Text _textBox AudioSourceGroup _audioSourceGroup Fields textAnimating Declaration public bool textAnimating Field Value Type Description Boolean Methods AnimateTextIn(List<DialogueCommand>, String, AudioClip, Action) Declaration public IEnumerator AnimateTextIn(List<DialogueCommand> commands, string processedMessage, AudioClip voice_sound, Action onFinish) Parameters Type Name Description List < DialogueCommand > commands String processedMessage AudioClip voice_sound Action onFinish Returns Type Description IEnumerator SkipToEndOfCurrentMessage() Declaration public void SkipToEndOfCurrentMessage()"
+  },
+  "api/Global.html": {
+    "href": "api/Global.html",
+    "title": "Namespace Global | Path of Hermes",
+    "keywords": "Namespace Global Classes ALIyerEdonAssets_Lighting AudioSourceGroup BuoyantObject Climbing DialogueManager DialogueUtility DialogueVertexAnimator InGameMenu MainMenu MonobehaviourExtensions MouseLook PlayerMovement SceneLoader SettingsInit SettingsMenu Startup Waypoint Wind Wind physics class based on physics overlap. Structs DialogueCommand TextAnimInfo Enums DialogueCommandType TextAnimationType"
+  },
+  "api/Global.InGameMenu.html": {
+    "href": "api/Global.InGameMenu.html",
+    "title": "Class InGameMenu | Path of Hermes",
+    "keywords": "Class InGameMenu Inheritance Object InGameMenu Namespace : Global Assembly : cs.temp.dll.dll Syntax public class InGameMenu : MonoBehaviour Methods BackToMainMenu() Declaration public void BackToMainMenu() Quit() Declaration public void Quit() Settings() Declaration public void Settings() Show() Declaration public void Show() Show(InputAction.CallbackContext) Declaration public void Show(InputAction.CallbackContext context) Parameters Type Name Description InputAction.CallbackContext context"
+  },
+  "api/Global.MainMenu.html": {
+    "href": "api/Global.MainMenu.html",
+    "title": "Class MainMenu | Path of Hermes",
+    "keywords": "Class MainMenu Inheritance Object MainMenu Namespace : Global Assembly : cs.temp.dll.dll Syntax public class MainMenu : MonoBehaviour Methods Play() Declaration public void Play() Quit() Declaration public void Quit() Settings() Declaration public void Settings()"
+  },
+  "api/Global.MonobehaviourExtensions.html": {
+    "href": "api/Global.MonobehaviourExtensions.html",
+    "title": "Class MonobehaviourExtensions | Path of Hermes",
+    "keywords": "Class MonobehaviourExtensions Inheritance Object MonobehaviourExtensions Namespace : Global Assembly : cs.temp.dll.dll Syntax public static class MonobehaviourExtensions Methods EnsureCoroutineStopped(MonoBehaviour, ref Coroutine) Declaration public static void EnsureCoroutineStopped(this MonoBehaviour value, ref Coroutine routine) Parameters Type Name Description MonoBehaviour value Coroutine routine"
+  },
+  "api/Global.MouseLook.html": {
+    "href": "api/Global.MouseLook.html",
+    "title": "Class MouseLook | Path of Hermes",
+    "keywords": "Class MouseLook Inheritance Object MouseLook Namespace : Global Assembly : cs.temp.dll.dll Syntax public class MouseLook : MonoBehaviour Fields mouseSensitivity Declaration public float mouseSensitivity Field Value Type Description Single playerBody Declaration public Transform playerBody Field Value Type Description Transform"
+  },
+  "api/Global.PlayerMovement.html": {
+    "href": "api/Global.PlayerMovement.html",
+    "title": "Class PlayerMovement | Path of Hermes",
+    "keywords": "Class PlayerMovement Inheritance Object PlayerMovement Namespace : Global Assembly : cs.temp.dll.dll Syntax public class PlayerMovement : MonoBehaviour Fields controller Declaration public CharacterController controller Field Value Type Description CharacterController gravity Declaration public float gravity Field Value Type Description Single groundCheck Declaration public Transform groundCheck Field Value Type Description Transform groundDistance Declaration public float groundDistance Field Value Type Description Single groundMask Declaration public LayerMask groundMask Field Value Type Description LayerMask jumpHeight Declaration public float jumpHeight Field Value Type Description Single speed Declaration public float speed Field Value Type Description Single"
+  },
+  "api/Global.SceneLoader.html": {
+    "href": "api/Global.SceneLoader.html",
+    "title": "Class SceneLoader | Path of Hermes",
+    "keywords": "Class SceneLoader Inheritance Object SceneLoader Namespace : Global Assembly : cs.temp.dll.dll Syntax public class SceneLoader : MonoBehaviour Properties Instance Declaration public static SceneLoader Instance { get; } Property Value Type Description SceneLoader Progress Declaration public float Progress { get; } Property Value Type Description Single Methods Load(String, LoadSceneMode) Declaration public void Load(string name, LoadSceneMode loadSceneMode = null) Parameters Type Name Description String name LoadSceneMode loadSceneMode LoadScene(String, LoadSceneMode) Declaration public static void LoadScene(string name, LoadSceneMode loadSceneMode = null) Parameters Type Name Description String name LoadSceneMode loadSceneMode"
+  },
+  "api/Global.SettingsInit.html": {
+    "href": "api/Global.SettingsInit.html",
+    "title": "Class SettingsInit | Path of Hermes",
+    "keywords": "Class SettingsInit Inheritance Object SettingsInit Namespace : Global Assembly : cs.temp.dll.dll Syntax public class SettingsInit : MonoBehaviour Properties CurrentResolutionIndex Declaration public static int CurrentResolutionIndex { get; } Property Value Type Description Int32 Instance Declaration public static SettingsInit Instance { get; } Property Value Type Description SettingsInit Resolutions Declaration public static Resolution[] Resolutions { get; } Property Value Type Description Resolution [] ResolutionsOptions Declaration public static List<string> ResolutionsOptions { get; } Property Value Type Description List < String >"
+  },
+  "api/Global.SettingsMenu.html": {
+    "href": "api/Global.SettingsMenu.html",
+    "title": "Class SettingsMenu | Path of Hermes",
+    "keywords": "Class SettingsMenu Inheritance Object SettingsMenu Namespace : Global Assembly : cs.temp.dll.dll Syntax public class SettingsMenu : MonoBehaviour Methods Back() Declaration public void Back() SetFullscreen(Boolean) Declaration public void SetFullscreen(bool value) Parameters Type Name Description Boolean value SetResolution(Int32) Declaration public void SetResolution(int resolutionIndex) Parameters Type Name Description Int32 resolutionIndex SetVolume(Single) Declaration public void SetVolume(float volume) Parameters Type Name Description Single volume"
+  },
+  "api/Global.Startup.html": {
+    "href": "api/Global.Startup.html",
+    "title": "Class Startup | Path of Hermes",
+    "keywords": "Class Startup Inheritance Object Startup Namespace : Global Assembly : cs.temp.dll.dll Syntax public class Startup"
+  },
+  "api/Global.TextAnimationType.html": {
+    "href": "api/Global.TextAnimationType.html",
+    "title": "Enum TextAnimationType | Path of Hermes",
+    "keywords": "Enum TextAnimationType Namespace : Global Assembly : cs.temp.dll.dll Syntax public enum TextAnimationType Fields Name Description none shake wave"
+  },
+  "api/Global.TextAnimInfo.html": {
+    "href": "api/Global.TextAnimInfo.html",
+    "title": "Struct TextAnimInfo | Path of Hermes",
+    "keywords": "Struct TextAnimInfo Namespace : Global Assembly : cs.temp.dll.dll Syntax public struct TextAnimInfo Fields endIndex Declaration public int endIndex Field Value Type Description Int32 startIndex Declaration public int startIndex Field Value Type Description Int32 type Declaration public TextAnimationType type Field Value Type Description TextAnimationType"
+  },
+  "api/Global.Waypoint.html": {
+    "href": "api/Global.Waypoint.html",
+    "title": "Class Waypoint | Path of Hermes",
+    "keywords": "Class Waypoint Inheritance Object Waypoint Namespace : Global Assembly : cs.temp.dll.dll Syntax public class Waypoint : MonoBehaviour Fields img Declaration public Image img Field Value Type Description Image meter Declaration public TMP_Text meter Field Value Type Description TMP_Text offset Declaration public Vector3 offset Field Value Type Description Vector3 target Declaration public Transform target Field Value Type Description Transform"
+  },
+  "api/Global.Wind.html": {
+    "href": "api/Global.Wind.html",
+    "title": "Class Wind | Path of Hermes",
+    "keywords": "Class Wind Wind physics class based on physics overlap. Inheritance Object Wind Namespace : Global Assembly : cs.temp.dll.dll Syntax public class Wind : MonoBehaviour"
+  },
+  "api/Player.Camera.html": {
+    "href": "api/Player.Camera.html",
+    "title": "Namespace Player.Camera | Path of Hermes",
+    "keywords": "Namespace Player.Camera Classes MoveCamera PlayerCamera"
+  },
+  "api/Player.Camera.MoveCamera.html": {
+    "href": "api/Player.Camera.MoveCamera.html",
+    "title": "Class MoveCamera | Path of Hermes",
+    "keywords": "Class MoveCamera Inheritance Object MoveCamera Namespace : Player.Camera Assembly : cs.temp.dll.dll Syntax public class MoveCamera : MonoBehaviour"
+  },
+  "api/Player.Camera.PlayerCamera.html": {
+    "href": "api/Player.Camera.PlayerCamera.html",
+    "title": "Class PlayerCamera | Path of Hermes",
+    "keywords": "Class PlayerCamera Inheritance Object PlayerCamera Namespace : Player.Camera Assembly : cs.temp.dll.dll Syntax public class PlayerCamera : MonoBehaviour Methods Update() Declaration public void Update()"
+  },
+  "api/Player.GroundSubstates.html": {
+    "href": "api/Player.GroundSubstates.html",
+    "title": "Namespace Player.GroundSubstates | Path of Hermes",
+    "keywords": "Namespace Player.GroundSubstates Classes PlayerCrouchState PlayerIdleState PlayerRollState PlayerSlideState PlayerSprintState PlayerWalkState"
+  },
+  "api/Player.GroundSubstates.PlayerCrouchState.html": {
+    "href": "api/Player.GroundSubstates.PlayerCrouchState.html",
+    "title": "Class PlayerCrouchState | Path of Hermes",
+    "keywords": "Class PlayerCrouchState Inheritance Object PlayerCrouchState Namespace : Player.GroundSubstates Assembly : cs.temp.dll.dll Syntax public class PlayerCrouchState : StateBase<PlayerStates> Constructors PlayerCrouchState(PlayerController) Declaration public PlayerCrouchState(PlayerController controller) Parameters Type Name Description PlayerController controller Methods OnEnter() Declaration public override void OnEnter() OnExit() Declaration public override void OnExit()"
+  },
+  "api/Player.GroundSubstates.PlayerIdleState.html": {
+    "href": "api/Player.GroundSubstates.PlayerIdleState.html",
+    "title": "Class PlayerIdleState | Path of Hermes",
+    "keywords": "Class PlayerIdleState Inheritance Object PlayerIdleState Namespace : Player.GroundSubstates Assembly : cs.temp.dll.dll Syntax public class PlayerIdleState : StateBase<PlayerStates> Constructors PlayerIdleState(PlayerController) Declaration public PlayerIdleState(PlayerController controller) Parameters Type Name Description PlayerController controller"
+  },
+  "api/Player.GroundSubstates.PlayerRollState.html": {
+    "href": "api/Player.GroundSubstates.PlayerRollState.html",
+    "title": "Class PlayerRollState | Path of Hermes",
+    "keywords": "Class PlayerRollState Inheritance Object PlayerRollState Namespace : Player.GroundSubstates Assembly : cs.temp.dll.dll Syntax public class PlayerRollState : StateBase<PlayerStates> Constructors PlayerRollState(PlayerController) Declaration public PlayerRollState(PlayerController controller) Parameters Type Name Description PlayerController controller"
+  },
+  "api/Player.GroundSubstates.PlayerSlideState.html": {
+    "href": "api/Player.GroundSubstates.PlayerSlideState.html",
+    "title": "Class PlayerSlideState | Path of Hermes",
+    "keywords": "Class PlayerSlideState Inheritance Object PlayerSlideState Namespace : Player.GroundSubstates Assembly : cs.temp.dll.dll Syntax public class PlayerSlideState : StateBase<PlayerStates> Constructors PlayerSlideState(PlayerController) Declaration public PlayerSlideState(PlayerController controller) Parameters Type Name Description PlayerController controller Methods OnEnter() Declaration public override void OnEnter() OnExit() Declaration public override void OnExit() OnLogic() Declaration public override void OnLogic()"
+  },
+  "api/Player.GroundSubstates.PlayerSprintState.html": {
+    "href": "api/Player.GroundSubstates.PlayerSprintState.html",
+    "title": "Class PlayerSprintState | Path of Hermes",
+    "keywords": "Class PlayerSprintState Inheritance Object PlayerSprintState Namespace : Player.GroundSubstates Assembly : cs.temp.dll.dll Syntax public class PlayerSprintState : StateBase<PlayerStates> Constructors PlayerSprintState(PlayerController) Declaration public PlayerSprintState(PlayerController controller) Parameters Type Name Description PlayerController controller Methods OnEnter() Declaration public override void OnEnter()"
+  },
+  "api/Player.GroundSubstates.PlayerWalkState.html": {
+    "href": "api/Player.GroundSubstates.PlayerWalkState.html",
+    "title": "Class PlayerWalkState | Path of Hermes",
+    "keywords": "Class PlayerWalkState Inheritance Object PlayerWalkState Namespace : Player.GroundSubstates Assembly : cs.temp.dll.dll Syntax public class PlayerWalkState : StateBase<PlayerStates> Constructors PlayerWalkState(PlayerController) Declaration public PlayerWalkState(PlayerController controller) Parameters Type Name Description PlayerController controller Methods OnEnter() Declaration public override void OnEnter()"
+  },
+  "api/Player.html": {
+    "href": "api/Player.html",
+    "title": "Namespace Player | Path of Hermes",
+    "keywords": "Namespace Player Classes PlayerBallThrow Responsible for throwing the ball and returning it PlayerController PlayerFallFromMap Logic for teleporting player to point when he fall from map PlayerInput"
+  },
+  "api/Player.PlayerBallThrow.html": {
+    "href": "api/Player.PlayerBallThrow.html",
+    "title": "Class PlayerBallThrow | Path of Hermes",
+    "keywords": "Class PlayerBallThrow Responsible for throwing the ball and returning it Inheritance Object PlayerBallThrow Namespace : Player Assembly : cs.temp.dll.dll Syntax public class PlayerBallThrow : MonoBehaviour Properties BackDistance Declaration public float BackDistance { get; } Property Value Type Description Single BallObject Declaration public GameObject BallObject { get; } Property Value Type Description GameObject BallPhysics Declaration public BallPhysics BallPhysics { get; } Property Value Type Description BallPhysics BallRigidbody Declaration public Rigidbody BallRigidbody { get; } Property Value Type Description Rigidbody CanThrow Can the player throw the ball Declaration public bool CanThrow { get; set; } Property Value Type Description Boolean GravityMultiplier Declaration public float GravityMultiplier { get; } Property Value Type Description Single LerpTime Declaration public float LerpTime { get; } Property Value Type Description Single PlayerCamera Declaration public Transform PlayerCamera { get; } Property Value Type Description Transform PlayerHand Declaration public Transform PlayerHand { get; } Property Value Type Description Transform ThrowForce Declaration public float ThrowForce { get; } Property Value Type Description Single Methods Lerping() Declaration public void Lerping()"
+  },
+  "api/Player.PlayerController.html": {
+    "href": "api/Player.PlayerController.html",
+    "title": "Class PlayerController | Path of Hermes",
+    "keywords": "Class PlayerController Inheritance Object PlayerController Namespace : Player Assembly : cs.temp.dll.dll Syntax public class PlayerController : MonoBehaviour Properties AirMultiplier Declaration public float AirMultiplier { get; } Property Value Type Description Single Crouching Declaration public bool Crouching { get; set; } Property Value Type Description Boolean CrouchSpeed Declaration public float CrouchSpeed { get; } Property Value Type Description Single CrouchYScale Declaration public float CrouchYScale { get; } Property Value Type Description Single DesiredMoveSpeed Declaration public float DesiredMoveSpeed { get; set; } Property Value Type Description Single ExitingSlope Declaration public bool ExitingSlope { get; set; } Property Value Type Description Boolean GroundDrag Declaration public float GroundDrag { get; } Property Value Type Description Single GroundLayerMask Declaration public LayerMask GroundLayerMask { get; } Property Value Type Description LayerMask Input Declaration public PlayerInput Input { get; } Property Value Type Description PlayerInput IsAbove Declaration public bool IsAbove { get; } Property Value Type Description Boolean IsGrounded Declaration public bool IsGrounded { get; } Property Value Type Description Boolean IsLeftWall Declaration public bool IsLeftWall { get; } Property Value Type Description Boolean IsRightWall Declaration public bool IsRightWall { get; } Property Value Type Description Boolean JumpCooldown Declaration public float JumpCooldown { get; } Property Value Type Description Single JumpHeight Declaration public float JumpHeight { get; } Property Value Type Description Single LastDesiredMoveSpeed Declaration public float LastDesiredMoveSpeed { get; set; } Property Value Type Description Single MoveSpeed Declaration public float MoveSpeed { get; set; } Property Value Type Description Single Orientation Declaration public Transform Orientation { get; } Property Value Type Description Transform PlayerHeight Declaration public float PlayerHeight { get; } Property Value Type Description Single ReadyToJump Declaration public bool ReadyToJump { get; set; } Property Value Type Description Boolean RigidBody Declaration public Rigidbody RigidBody { get; } Property Value Type Description Rigidbody SlideDrag Declaration public float SlideDrag { get; } Property Value Type Description Single SlideSpeed Declaration public float SlideSpeed { get; } Property Value Type Description Single Speed Declaration public float Speed { get; } Property Value Type Description Single SprintSpeed Declaration public float SprintSpeed { get; } Property Value Type Description Single StartWallrunForce Declaration public float StartWallrunForce { get; } Property Value Type Description Single StartYScale Declaration public float StartYScale { get; } Property Value Type Description Single WalkSpeed Declaration public float WalkSpeed { get; } Property Value Type Description Single WallrunDrag Declaration public float WallrunDrag { get; } Property Value Type Description Single WallrunJumpForce Declaration public float WallrunJumpForce { get; } Property Value Type Description Single WallrunTick Declaration public float WallrunTick { get; } Property Value Type Description Single Methods DisplaySpeed() Declaration public void DisplaySpeed() FixedUpdate() Declaration public void FixedUpdate() Update() Declaration public void Update()"
+  },
+  "api/Player.PlayerFallFromMap.html": {
+    "href": "api/Player.PlayerFallFromMap.html",
+    "title": "Class PlayerFallFromMap | Path of Hermes",
+    "keywords": "Class PlayerFallFromMap Logic for teleporting player to point when he fall from map Inheritance Object PlayerFallFromMap Namespace : Player Assembly : cs.temp.dll.dll Syntax public class PlayerFallFromMap : MonoBehaviour"
+  },
+  "api/Player.PlayerInput.html": {
+    "href": "api/Player.PlayerInput.html",
+    "title": "Class PlayerInput | Path of Hermes",
+    "keywords": "Class PlayerInput Inheritance Object PlayerInput Namespace : Player Assembly : cs.temp.dll.dll Syntax public class PlayerInput : MonoBehaviour Properties IsCrouch Returns true if jump key is pressed Declaration public bool IsCrouch { get; } Property Value Type Description Boolean Boolean IsFire Returns true if fire key is pressed Declaration public bool IsFire { get; } Property Value Type Description Boolean Boolean IsJump Returns true if jump key is pressed Declaration public bool IsJump { get; } Property Value Type Description Boolean Boolean IsSprint Returns true if sprint key is pressed Declaration public bool IsSprint { get; } Property Value Type Description Boolean Boolean LookDirection Returns Mouse delta, Gamepad right stick, etc. Declaration public Vector2 LookDirection { get; } Property Value Type Description Vector2 Vector from [-1,-1] to [1,1] MovementDirection Returns WASD, Gamepad left stick, etc. Declaration public Vector2 MovementDirection { get; } Property Value Type Description Vector2 Vector from [-1,-1] to [1,1] Methods SetCursorLock(Boolean) Sets cursor invisible and lock it to center of display Declaration public static void SetCursorLock(bool isLock) Parameters Type Name Description Boolean isLock true is lock"
+  },
+  "api/Player.States.html": {
+    "href": "api/Player.States.html",
+    "title": "Namespace Player.States | Path of Hermes",
+    "keywords": "Namespace Player.States Classes PlayerFallState PlayerGroundState PlayerJumpState PlayerWalljumpState PlayerWallrunState Enums PlayerStates All PlayerStates"
+  },
+  "api/Player.States.PlayerFallState.html": {
+    "href": "api/Player.States.PlayerFallState.html",
+    "title": "Class PlayerFallState | Path of Hermes",
+    "keywords": "Class PlayerFallState Inheritance Object PlayerFallState Namespace : Player.States Assembly : cs.temp.dll.dll Syntax public class PlayerFallState : StateBase<PlayerStates> Constructors PlayerFallState(PlayerController) Declaration public PlayerFallState(PlayerController controller) Parameters Type Name Description PlayerController controller Methods OnEnter() Declaration public override void OnEnter() OnLogic() Declaration public override void OnLogic()"
+  },
+  "api/Player.States.PlayerGroundState.html": {
+    "href": "api/Player.States.PlayerGroundState.html",
+    "title": "Class PlayerGroundState | Path of Hermes",
+    "keywords": "Class PlayerGroundState Inheritance Object PlayerGroundState Namespace : Player.States Assembly : cs.temp.dll.dll Syntax public class PlayerGroundState : StateBase<PlayerStates> Constructors PlayerGroundState(PlayerController) Declaration public PlayerGroundState(PlayerController controller) Parameters Type Name Description PlayerController controller Methods Init() Declaration public override void Init() OnEnter() Declaration public override void OnEnter() OnLogic() Declaration public override void OnLogic()"
+  },
+  "api/Player.States.PlayerJumpState.html": {
+    "href": "api/Player.States.PlayerJumpState.html",
+    "title": "Class PlayerJumpState | Path of Hermes",
+    "keywords": "Class PlayerJumpState Inheritance Object PlayerJumpState Namespace : Player.States Assembly : cs.temp.dll.dll Syntax public class PlayerJumpState : StateBase<PlayerStates> Constructors PlayerJumpState(PlayerController) Declaration public PlayerJumpState(PlayerController controller) Parameters Type Name Description PlayerController controller Methods OnEnter() Declaration public override void OnEnter() OnLogic() Declaration public override void OnLogic()"
+  },
+  "api/Player.States.PlayerStates.html": {
+    "href": "api/Player.States.PlayerStates.html",
+    "title": "Enum PlayerStates | Path of Hermes",
+    "keywords": "Enum PlayerStates All PlayerStates Namespace : Player.States Assembly : cs.temp.dll.dll Syntax public enum PlayerStates Fields Name Description Crouch Only runs when the player is on the ground and the crouch button is pressed Fall Fired when the player has left the surface or the jump state has ended Ground Runs when the player is on the ground Hook All PlayerStates Idle Runs when the player is on the ground and not moving Jump Executed when the player presses the jump button Run Fired when the player is in walking state and the run button is pressed Slide Substate of Ground Performed while the player makes a tackle Swing All PlayerStates Walk Executed when the player presses the WASD buttons Walljump Runs when the player is in the \"Wallrun\" state Wallrun Performed while running on the wall"
+  },
+  "api/Player.States.PlayerWalljumpState.html": {
+    "href": "api/Player.States.PlayerWalljumpState.html",
+    "title": "Class PlayerWalljumpState | Path of Hermes",
+    "keywords": "Class PlayerWalljumpState Inheritance Object PlayerWalljumpState Namespace : Player.States Assembly : cs.temp.dll.dll Syntax public class PlayerWalljumpState : StateBase<PlayerStates> Constructors PlayerWalljumpState(PlayerController) Declaration public PlayerWalljumpState(PlayerController controller) Parameters Type Name Description PlayerController controller Methods OnEnter() Declaration public override void OnEnter()"
+  },
+  "api/Player.States.PlayerWallrunState.html": {
+    "href": "api/Player.States.PlayerWallrunState.html",
+    "title": "Class PlayerWallrunState | Path of Hermes",
+    "keywords": "Class PlayerWallrunState Inheritance Object PlayerWallrunState Namespace : Player.States Assembly : cs.temp.dll.dll Syntax public class PlayerWallrunState : StateBase<PlayerStates> Constructors PlayerWallrunState(PlayerController) Declaration public PlayerWallrunState(PlayerController controller) Parameters Type Name Description PlayerController controller Methods OnEnter() Declaration public override void OnEnter() OnLogic() Declaration public override void OnLogic()"
+  },
+  "api/Weapons.Ball.BallPhysics.html": {
+    "href": "api/Weapons.Ball.BallPhysics.html",
+    "title": "Class BallPhysics | Path of Hermes",
+    "keywords": "Class BallPhysics Responsible for the physics of the ball Inheritance Object BallPhysics Namespace : Weapons.Ball Assembly : cs.temp.dll.dll Syntax public class BallPhysics : MonoBehaviour Methods ResetNumbersOfCollisions() Resets the collision counter Declaration public void ResetNumbersOfCollisions()"
+  },
+  "api/Weapons.Ball.html": {
+    "href": "api/Weapons.Ball.html",
+    "title": "Namespace Weapons.Ball | Path of Hermes",
+    "keywords": "Namespace Weapons.Ball Classes BallPhysics Responsible for the physics of the ball"
+  },
+  "api/Weapons.Ball.States.BallFlightState.html": {
+    "href": "api/Weapons.Ball.States.BallFlightState.html",
+    "title": "Class BallFlightState | Path of Hermes",
+    "keywords": "Class BallFlightState Ball flight state Inheritance Object BallFlightState Namespace : Weapons.Ball.States Assembly : cs.temp.dll.dll Syntax public class BallFlightState : StateBase<BallStates> Constructors BallFlightState(PlayerBallThrow) Declaration public BallFlightState(PlayerBallThrow ballThrow) Parameters Type Name Description PlayerBallThrow ballThrow Methods OnLogic() Declaration public override void OnLogic()"
+  },
+  "api/Weapons.Ball.States.BallLerpState.html": {
+    "href": "api/Weapons.Ball.States.BallLerpState.html",
+    "title": "Class BallLerpState | Path of Hermes",
+    "keywords": "Class BallLerpState Inheritance Object BallLerpState Namespace : Weapons.Ball.States Assembly : cs.temp.dll.dll Syntax public class BallLerpState : StateBase<BallStates> Constructors BallLerpState(PlayerBallThrow) Declaration public BallLerpState(PlayerBallThrow ballThrow) Parameters Type Name Description PlayerBallThrow ballThrow Methods OnEnter() Declaration public override void OnEnter() OnLogic() Declaration public override void OnLogic()"
+  },
+  "api/Weapons.Ball.States.BallPocketState.html": {
+    "href": "api/Weapons.Ball.States.BallPocketState.html",
+    "title": "Class BallPocketState | Path of Hermes",
+    "keywords": "Class BallPocketState Inheritance Object BallPocketState Namespace : Weapons.Ball.States Assembly : cs.temp.dll.dll Syntax public class BallPocketState : StateBase<BallStates> Constructors BallPocketState(PlayerBallThrow) Declaration public BallPocketState(PlayerBallThrow ballThrow) Parameters Type Name Description PlayerBallThrow ballThrow Methods OnEnter() Declaration public override void OnEnter()"
+  },
+  "api/Weapons.Ball.States.BallStates.html": {
+    "href": "api/Weapons.Ball.States.BallStates.html",
+    "title": "Enum BallStates | Path of Hermes",
+    "keywords": "Enum BallStates Namespace : Weapons.Ball.States Assembly : cs.temp.dll.dll Syntax public enum BallStates Fields Name Description Flight Lerp Pocket Throw"
+  },
+  "api/Weapons.Ball.States.BallThrowState.html": {
+    "href": "api/Weapons.Ball.States.BallThrowState.html",
+    "title": "Class BallThrowState | Path of Hermes",
+    "keywords": "Class BallThrowState Inheritance Object BallThrowState Namespace : Weapons.Ball.States Assembly : cs.temp.dll.dll Syntax public class BallThrowState : StateBase<BallStates> Constructors BallThrowState(PlayerBallThrow) Declaration public BallThrowState(PlayerBallThrow ballThrow) Parameters Type Name Description PlayerBallThrow ballThrow Methods OnEnter() Declaration public override void OnEnter()"
+  },
+  "api/Weapons.Ball.States.html": {
+    "href": "api/Weapons.Ball.States.html",
+    "title": "Namespace Weapons.Ball.States | Path of Hermes",
+    "keywords": "Namespace Weapons.Ball.States Classes BallFlightState Ball flight state BallLerpState BallPocketState BallThrowState Enums BallStates"
+  },
+  "api/Weapons.DestructibleGameObject.html": {
+    "href": "api/Weapons.DestructibleGameObject.html",
+    "title": "Class DestructibleGameObject | Path of Hermes",
+    "keywords": "Class DestructibleGameObject Logic for destructible object Inheritance Object DestructibleGameObject Namespace : Weapons Assembly : cs.temp.dll.dll Syntax public class DestructibleGameObject : MonoBehaviour Methods TakeDamage(Int32) Declaration public void TakeDamage(int damage) Parameters Type Name Description Int32 damage"
+  },
+  "api/Weapons.html": {
+    "href": "api/Weapons.html",
+    "title": "Namespace Weapons | Path of Hermes",
+    "keywords": "Namespace Weapons Classes DestructibleGameObject Logic for destructible object"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "Path of Hermes | Path of Hermes",
+    "keywords": "Path of Hermes Russian version Getting started ☄️ Unity 2021.3.5f1 [ Download ] Project structure 📦Path-of-Hermes ├──📂Audio contains audio mixers │ ├──📂Music contains music │ └──📂Sounds contains sounds (wind, footsteps) │ ├──📂Graphics graphics content folder │ ├──📂Materials materials without models │ ├──📂Models contains models and materials for them (houses) │ ├──📂Particles particles include models and sprites for them │ ├──📂Shaders shaders │ ├──📂Sprites contains sprites (GUI, HUD) │ └──📂Terrain contains terrain data │ ├──📂Packages contains third-party libraries, assets (TextMeshPro, Stylezed Water etc.) ├──📂Prefabs prefabs (.prefab files) ├──📂Scenes contains scenes (menu, game) ├──📂Scripts contains source code (.cs files) └──📂Settings contains settings files (URP settings, Input system etc.) Credits 💖 Made by Bit of Meat team."
+  },
+  "manual/wind.html": {
+    "href": "manual/wind.html",
+    "title": "Wind Component [source code] | Path of Hermes",
+    "keywords": "Wind Component [ source code ] Russian Adding to the scene To start you need to create empty GameObject. Now let's add to it Wind component. Wind settings Variables Strength - wind force (default: 20 meters) WindLayerMask - layer mask of objects to which the wind force will be applied (default: nothing - no layer specified) MaximumOfDetectionObjects - is responsible for the maximum number of objects to which the force of the wind can be applied (default: 10 objects). Performance depends on this parameter, because it sets the size of the created heap for storing colliders in memory (more about this: Performance optimization tips: Physics in Unity | Tutorial ) To change position, size and direction of the wind force use transform . red arrow points wind direction (by default points up)."
+  }
+}
