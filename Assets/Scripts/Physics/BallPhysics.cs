@@ -1,35 +1,38 @@
 using UnityEngine;
+using Player;
 
-/// <summary>
-/// Responsible for the physics of the ball
-/// </summary>
-public class BallPhysics : MonoBehaviour {
-    [SerializeField] private int _damage;
-    [SerializeField] private int _maximumNumberOfBounces = 3;
-    [SerializeField] private Rigidbody _rigidbody;
-    [SerializeField] private PlayerBallThrow _playerBall;
-    private int _numberOfCollisions = 0;
-
+namespace Weapons.Ball {
     /// <summary>
-    /// Handle all ball collisions
+    /// Responsible for the physics of the ball
     /// </summary>
-    /// <param name="collision">Describes a collision</param>
-    private void OnCollisionEnter(Collision collision) {
-        _numberOfCollisions++;
+    public class BallPhysics : MonoBehaviour {
+        [SerializeField] private int _damage;
+        [SerializeField] private int _maximumNumberOfBounces = 3;
+        [SerializeField] private Rigidbody _rigidbody;
+        [SerializeField] private PlayerBallThrow _playerBall;
+        private int _numberOfCollisions = 0;
 
-        DestructibleGameObject _object = collision.gameObject.GetComponent<DestructibleGameObject>();
-        if(_object != null) _object.TakeDamage(_damage);
+        /// <summary>
+        /// Handle all ball collisions
+        /// </summary>
+        /// <param name="collision">Describes a collision</param>
+        private void OnCollisionEnter(Collision collision) {
+            _numberOfCollisions++;
 
-        if (_numberOfCollisions == _maximumNumberOfBounces) {
-            ResetNumbersOfCollisions();
-            _playerBall.Lerping();
+            DestructibleGameObject _object = collision.gameObject.GetComponent<DestructibleGameObject>();
+            if(_object != null) _object.TakeDamage(_damage);
+
+            if (_numberOfCollisions == _maximumNumberOfBounces) {
+                ResetNumbersOfCollisions();
+                _playerBall.Lerping();
+            }
         }
-    }
 
-    /// <summary>
-    /// Resets the collision counter
-    /// </summary>
-    public void ResetNumbersOfCollisions() {
-        _numberOfCollisions = 0;
+        /// <summary>
+        /// Resets the collision counter
+        /// </summary>
+        public void ResetNumbersOfCollisions() {
+            _numberOfCollisions = 0;
+        }
     }
 }

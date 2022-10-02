@@ -8,7 +8,7 @@ public class InGameMenu : MonoBehaviour {
 
     public void Show() {
         bool _uiState = gameObject.activeSelf;
-        PlayerInput.SetCursorLock(_uiState);
+        Player.PlayerInput.SetCursorLock(_uiState);
         gameObject.SetActive(!_uiState);
         Time.timeScale = _uiState ? 1f : 0f;
     }

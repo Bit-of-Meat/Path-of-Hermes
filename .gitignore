@@ -79,3 +79,10 @@ crashlytics-build.properties
 
 # Other
 UpgradeLog.htm
+
+# Documentation
+Documentation/api/
+Documentation/obj/
+Documentation/index.*
+_site/
+Assets/**/obj*

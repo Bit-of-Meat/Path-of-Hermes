@@ -104966,7 +104966,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37692
+  m_Name: pb_Mesh29612
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -107413,17 +107413,17 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.3442225, g: 0.73773575, b: 1, a: 1}
+  shallowColor: {r: 0.3442295, g: 0.73773575, b: 1, a: 1}
   deepColor: {r: 0.58552855, g: 0.9622641, b: 0.95837563, a: 1}
   colorDepth: 2.59
-  horizonColor: {r: 0.24044192, g: 0.2745669, b: 1, a: 1}
+  horizonColor: {r: 0.24044892, g: 0.27457392, b: 1, a: 1}
   horizonDistance: 20
   shoreFade: 0
   shoreColor: {r: 0, g: 0.98039216, b: 0.915087, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0
-  waveColor: {r: 0.36767107, g: 0.63200873, b: 0.8962264, a: 1}
+  waveColor: {r: 0.36767808, g: 0.63200873, b: 0.8962264, a: 1}
   underwaterColor: {r: 0, g: 0, b: 0, a: 0}
   underwaterColorStrength: 0
   underwaterRefractionStrength: 0

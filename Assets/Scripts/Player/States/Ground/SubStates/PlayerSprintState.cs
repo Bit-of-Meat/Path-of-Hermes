@@ -1,13 +1,16 @@
 using FSM;
+using Player.States;
 
-class PlayerSprintState : StateBase<PlayerStates> {
-    private PlayerController _controller;
+namespace Player.GroundSubstates {
+    public class PlayerSprintState : StateBase<PlayerStates> {
+        private PlayerController _controller;
 
-    public PlayerSprintState(PlayerController controller) : base(needsExitTime: false) {
-        _controller = controller;
-    }
+        public PlayerSprintState(PlayerController controller) : base(needsExitTime: false) {
+            _controller = controller;
+        }
 
-    public override void OnEnter() {
-        _controller.DesiredMoveSpeed = _controller.SprintSpeed;
+        public override void OnEnter() {
+            _controller.DesiredMoveSpeed = _controller.SprintSpeed;
+        }
     }
 }

@@ -1,11 +1,16 @@
 using UnityEngine;
 
-public class PlayerFallFromMap : MonoBehaviour {
-    [SerializeField] private Transform _player;
-    [SerializeField] private float _respawnHeight = -10f;
+namespace Player {
+    /// <summary>
+    /// Logic for teleporting player to point when he fall from map
+    /// </summary>
+    public class PlayerFallFromMap : MonoBehaviour {
+        [SerializeField] private Transform _player;
+        [SerializeField] private float _respawnHeight = -10f;
 
-    void Update() {
-        if (_player.position.y < _respawnHeight)
-            _player.position = transform.position;
+        private void Update() {
+            if (_player.position.y < _respawnHeight)
+                _player.position = transform.position;
+        }
     }
 }

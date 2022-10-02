@@ -1,9 +1,12 @@
 using FSM;
+using Player.States;
 
-class PlayerIdleState : StateBase<PlayerStates> {
-    private PlayerController _controller;
+namespace Player.GroundSubstates {
+    public class PlayerIdleState : StateBase<PlayerStates> {
+        private PlayerController _controller;
 
-    public PlayerIdleState(PlayerController controller) : base(needsExitTime: false) {
-        _controller = controller;
+        public PlayerIdleState(PlayerController controller) : base(needsExitTime: false) {
+            _controller = controller;
+        }
     }
 }

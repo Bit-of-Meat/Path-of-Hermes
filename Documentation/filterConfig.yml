@@ -1,0 +1,13 @@
+apiRules:
+- include:
+    uidRegex: ^Player
+    type: Namespace
+- include:
+    uidRegex: ^Weapons
+    type: Namespace
+- include:
+    uidRegex: ^Global
+    type: Namespace
+- exclude:
+    uidRegex: .*
+    type: Namespace

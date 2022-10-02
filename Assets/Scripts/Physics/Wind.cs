@@ -9,10 +9,8 @@ public class Wind : MonoBehaviour {
     [Header("Settings")]
     [SerializeField] private float _strength = 20f;
     [SerializeField] private LayerMask _windLayerMask;
-
     [Header("Perfomance")]
     [SerializeField] private int _maximumOfDetectionObjects = 10;
-
     private Collider[] _buffer;
 
     private void Start() {
