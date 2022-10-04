@@ -2,343 +2,343 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.ALIyerEdonAssets_Lighting.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.AudioSourceGroup.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.BuoyantObject.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.Climbing.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.DialogueCommand.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.DialogueCommandType.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.DialogueManager.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.DialogueUtility.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.DialogueVertexAnimator.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.InGameMenu.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.MainMenu.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.MonobehaviourExtensions.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.MouseLook.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.PlayerMovement.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.SceneLoader.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.SettingsInit.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.SettingsMenu.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.Startup.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.TextAnimationType.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.TextAnimInfo.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.Waypoint.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.Wind.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Global.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.Camera.MoveCamera.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.Camera.PlayerCamera.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.Camera.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.GroundSubstates.PlayerCrouchState.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.GroundSubstates.PlayerIdleState.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.GroundSubstates.PlayerRollState.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.GroundSubstates.PlayerSlideState.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.GroundSubstates.PlayerSprintState.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.GroundSubstates.PlayerWalkState.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.GroundSubstates.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.PlayerBallThrow.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.PlayerController.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.PlayerFallFromMap.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.PlayerInput.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.States.PlayerFallState.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.States.PlayerGroundState.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.States.PlayerJumpState.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.States.PlayerStates.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.States.PlayerWalljumpState.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.States.PlayerWallrunState.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.States.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Player.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Weapons.Ball.BallPhysics.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Weapons.Ball.States.BallFlightState.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Weapons.Ball.States.BallLerpState.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Weapons.Ball.States.BallPocketState.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Weapons.Ball.States.BallStates.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Weapons.Ball.States.BallThrowState.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Weapons.Ball.States.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Weapons.Ball.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Weapons.DestructibleGameObject.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/api/Weapons.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/index.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bit-of-meat.github.io/Path-of-Hermes/manual/wind.html</loc>
-    <lastmod>2022-10-04T06:38:46+00:00</lastmod>
+    <lastmod>2022-10-04T07:01:49+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
